@@ -5,10 +5,7 @@ function FormLayout({children}){
 
     const handlePhoto = async () => {
     try {
-      const dataUrl = await toPng(formRef.current, {
-        cacheBust: true,
-        quality: 1,
-      });
+      const dataUrl = await toPng(formRef.current, { cacheBust: true });
 
       const link = document.createElement('a');
       link.href = dataUrl;
